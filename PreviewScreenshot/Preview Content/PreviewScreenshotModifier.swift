@@ -36,6 +36,6 @@ extension View {
 struct Previews_PreviewScreenshotModifier_LibraryContent: LibraryContentProvider {
     
     func modifiers(base: any View) -> [LibraryItem] {
-        [LibraryItem(base.previewScreenshot())]
+        LibraryItem(base.previewScreenshot())
     }
 }
