@@ -9,10 +9,11 @@ import SwiftUI
 
 struct PreviewScreenshotModifier: ViewModifier {
     let screenshotDirectoryURL = URL(filePath: "/Users/peterpan/Desktop/preview/")
-
+    let tapCount = 3
+    
     func body(content: Content) -> some View {
         content
-            .onTapGesture(count: 3, perform: {
+            .onTapGesture(count: tapCount, perform: {
                 let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
                 let window = scene?.keyWindow ?? UIWindow(frame: .zero)
                 let renderer = UIGraphicsImageRenderer(size: window.bounds.size)
